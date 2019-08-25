@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+  <!--
+
+Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.3.0 
+Consulte <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
+Gerado em: 2019.08.25 às 06:30:47 PM BRT 
+
+  -->
+  <bindings xmlns:tns="http://www.luciano.com.br/webservicesoap/xml" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="br.com.luciano.soapclient.xml"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="tns:PersonDetailsRequest">
+      <class ref="br.com.luciano.soapclient.xml.PersonDetailsRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:PersonDetailsResponse">
+      <class ref="br.com.luciano.soapclient.xml.PersonDetailsResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:Person">
+      <class ref="br.com.luciano.soapclient.xml.Person"/>
+    </bindings>
+  </bindings>
+</bindings>
