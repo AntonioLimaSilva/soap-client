@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.3.0 
 // Consulte <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2019.08.25 às 06:30:47 PM BRT 
+// Gerado em: 2019.08.27 às 10:06:44 PM BRT 
 //
 
 
@@ -24,6 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="age" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="address" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
@@ -37,17 +38,35 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Person", propOrder = {
+    "id",
     "name",
     "age",
     "address"
 })
 public class Person {
 
+    protected int id;
     @XmlElement(required = true)
     protected String name;
     protected int age;
     @XmlElement(required = true)
     protected String address;
+
+    /**
+     * Obtém o valor da propriedade id.
+     * 
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * Define o valor da propriedade id.
+     * 
+     */
+    public void setId(int value) {
+        this.id = value;
+    }
 
     /**
      * Obtém o valor da propriedade name.

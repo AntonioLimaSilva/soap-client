@@ -18,13 +18,13 @@ public class SoapClientApplication {
 	@Bean
 	CommandLineRunner lookup(SOAPConnector soapConnector) {
 		return args -> {
-			String name = "Gabriel Chaves"; //Default Name
+			int id = 1; //Default Name
 			if(args.length>0){
-				name = args[0];
+				id = Integer.valueOf(args[0]);
 			}
 
 			PersonDetailsRequest request = new PersonDetailsRequest();
-			request.setName(name);
+			request.setId(id);
 			PersonDetailsResponse response = (PersonDetailsResponse) soapConnector.callWebService("http://localhost:8080/service/person-details", request);
 			System.out.println("===== Response Web Service ====");
 			System.out.println("Name : "+response.getPerson().getName());
@@ -33,4 +33,6 @@ public class SoapClientApplication {
 			System.out.println("===== END ====");
 		};
 	}
+
+
 }
